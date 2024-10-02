@@ -18,13 +18,13 @@ ext {
 
 
 dependencies {
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiter"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiter"
+//    testImplementation "org.junit.jupiter:junit-jupiter-api:$jupiter"
+//    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$jupiter"
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
-    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: "$jupiter"
+//    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: "$jupiter"
 
     // https://mvnrepository.com/artifact/org.testng/testng
-//    testImplementation group: 'org.testng', name: 'testng', version: '7.5.1'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5.1'
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly "org.projectlombok:lombok:$lombok"
@@ -37,16 +37,16 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.mockito/mockito-core
 
-    testImplementation 'org.mockito:mockito-core:' + mockito
+//    testImplementation 'org.mockito:mockito-core:' + mockito
     // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
-    testImplementation 'org.mockito:mockito-junit-jupiter:' + mockito
+//    testImplementation 'org.mockito:mockito-junit-jupiter:' + mockito
 
 
 }
 
 test {
-    useJUnitPlatform()
-//    useTestNG()
+//    useJUnitPlatform()
+    useTestNG()
     finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
